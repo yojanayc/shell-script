@@ -1,11 +1,11 @@
 #!/bin/bash
 # Define the directory path
-Sample="/home/shell"
+Sample="/home/ec2-user/shell"
 
 # Check if the directory already exists
 if [ ! -d "$Sample" ]; then
     echo "Directory $Sample does not exist. Creating it now..."
-    mkdir "$DIR"
+    mkdir "$Sample"
     echo "Directory $Sample created."
 else
     echo "Directory $Sample already exists. No action needed."
