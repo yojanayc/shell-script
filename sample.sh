@@ -1,15 +1,13 @@
 #!/bin/bash
 
-echo "Script name: $0"
-echo "First argument: $1"
-echo "Number of arguments: $#"
-echo "All arguments (\$@): $@"
-echo "All arguments (\$*): $*"
-echo "Last command exit status: $?"
-echo "Current process ID: $$"
-echo "Process ID of last background command: $!"
+# Define the directory path
+DIR="/myfolder"
 
-# Example of using "$@"
-for arg in "$@"; do
-  echo "Argument: $arg"
-done
+# Check if the directory already exists
+if [ ! -d "$DIR" ]; then
+    echo "Directory $DIR does not exist. Creating it now..."
+    mkdir "$DIR"
+    echo "Directory $DIR created."
+else
+    echo "Directory $DIR already exists. No action needed."
+fi
