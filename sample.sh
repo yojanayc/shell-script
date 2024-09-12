@@ -1,16 +1,15 @@
 #!/bin/bash
 
-# Define colors
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-NC='\033[0m'  # No Color (Reset)
+echo "Script name: $0"
+echo "First argument: $1"
+echo "Number of arguments: $#"
+echo "All arguments (\$@): $@"
+echo "All arguments (\$*): $*"
+echo "Last command exit status: $?"
+echo "Current process ID: $$"
+echo "Process ID of last background command: $!"
 
-# Success message
-echo -e "${GREEN}Success: It's completed successfully!${NC}"
-
-# Warning message
-echo -e "${YELLOW}Warning: There is a warning message.${NC}"
-
-# Error message
-echo -e "${RED}Error: Oops something went wrong!${NC}"
+# Example of using "$@"
+for arg in "$@"; do
+  echo "Argument: $arg"
+done
