@@ -1,6 +1,6 @@
 #!/bin/bash
 # Define the directory path
-Sample="/home/ec2-user"
+Sample="/home/shell"
 
 # Check if the directory already exists
 if [ ! -d "$Sample" ]; then
