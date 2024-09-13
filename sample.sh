@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Run a command
-ls /non_existent_directory
+#ls /non_existent_directory
+ls /01-helloworld.sh
 
 # Check the exit status
 if [ $? -eq 0 ]; then
