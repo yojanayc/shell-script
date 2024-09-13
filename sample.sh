@@ -1,12 +1,5 @@
 #!/bin/bash
-# Define the directory path
-Sample="/home/ec2-user/shell"
+echo "Starting script..."  # This will output to the terminal
 
-# Check if the directory already exists
-if [ ! -d "$Sample" ]; then
-    echo "Directory $Sample does not exist. Creating it now..."
-    mkdir "$Sample"
-    echo "Directory $Sample created."
-else
-    echo "Directory $Sample already exists. No action needed."
-fi
+# Redirect to a log file
+echo "This is a log message" >> /home/ec2-user/logfile.log
