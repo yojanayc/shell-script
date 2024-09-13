@@ -1,12 +1,11 @@
 #!/bin/bash
 
-LOGFILE="/home/ec2-user/logfile.log"
+# Run a command
+ls /non_existent_directory
 
-log() {
-  echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" >> "$LOGFILE"
-}
-
-log "Script started"
-# Some operations
-log "Operation completed"
-log "Script finished"
+# Check the exit status
+if [ $? -eq 0 ]; then
+    echo "Command executed successfully."
+else
+    echo "Command failed with exit status $?."
+fi
