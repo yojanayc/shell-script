@@ -1,5 +1,8 @@
 #!/bin/bash
-echo "Starting script..."  # This will output to the terminal
 
-# Redirect to a log file
-echo "This is a log message" >> /home/ec2-user/logfile.log
+# Redirect stdout (1) and stderr (2) to logfile.log
+exec > /home/ec2-user/logfile.log 2>&1
+
+echo "Starting script..."
+ls /nonexistent_directory  # This will log an error
+echo "Script finished."
